@@ -126,3 +126,65 @@ Desarrollar una aplicación móvil que ayude a los estudiantes a mejorar sus há
 - Figma
 
 ---
+
+# 📱 Pantallas de la app
+
+| Pantalla | Descripción |
+|---|---|
+| Login | Correo/contraseña + recuperar contraseña |
+| Registro | Nombre, universidad, carrera |
+| Dashboard | Métricas, gráfico semanal, apps más usadas, metas |
+| Estadísticas | Pastel por categoría, uso por hora, racha |
+| Límites | Control +/− por app, bloqueo automático, modo estudio |
+| Bienestar | Respiración 4-7-8 animada, Pomodoro con temporizador |
+| Perfil | Logros, datos del usuario, cerrar sesión |
+| Admin | Gestión de usuarios, publicar consejos |
+| Notificaciones | Historial de alertas enviadas |
+
+---
+
+## 🏗️ Arquitectura
+
+```
+MVVM + Navigation Component + Firebase + Coroutines
+
+ui/
+├── auth/           → LoginFragment, RegisterFragment
+├── dashboard/      → DashboardFragment, DashboardViewModel
+│   └── adapter/   → AppUsageAdapter, GoalAdapter
+├── stats/          → StatsFragment, StatsViewModel
+├── limits/         → LimitsFragment
+├── wellness/       → WellnessFragment, BreathingFragment, PomodoroFragment
+├── profile/        → ProfileFragment
+├── admin/          → AdminFragment, UserAdapter
+└── notifications/  → NotificationsFragment, NotificationAdapter
+
+data/
+├── model/          → Models.kt (User, Goal, AppLimit, Notification, WellnessTip)
+├── UsageMonitorService.kt  → Servicio en segundo plano
+└── BootReceiver.kt         → Inicio automático al encender
+```
+
+## 📋 Permisos requeridos
+
+| Permiso | Uso |
+|---|---|
+| `PACKAGE_USAGE_STATS` | Leer tiempo de uso de apps (activar manualmente en Ajustes del dispositivo) |
+| `POST_NOTIFICATIONS` | Alertas al usuario |
+| `INTERNET` | Firebase |
+| `FOREGROUND_SERVICE` | Monitoreo en segundo plano |
+| `RECEIVE_BOOT_COMPLETED` | Arranque automático |
+
+---
+
+## 🛠️ Tecnologías
+
+- **Kotlin** + **Android Studio**
+- **Firebase Auth** + **Firestore**
+- **Navigation Component** (fragmentos)
+- **MPAndroidChart** (gráficos)
+- **Material Design 3**
+- **ViewModel + LiveData** (MVVM)
+- **Coroutines** (async)
+- **UsageStatsManager** (monitoreo de apps)
+
