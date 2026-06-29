@@ -1,0 +1,10 @@
+{
+  "_INSTRUCCION": "REEMPLAZA ESTE ARCHIVO con tu google-services.json real descargado desde Firebase Console.",
+  "_PASOS": [
+    "1. Ve a https://console.firebase.google.com",
+    "2. Crea proyecto 'equilibrio-app'",
+    "3. Agrega app Android con package 'com.equilibrio'",
+    "4. Descarga google-services.json",
+    "5. Reemplaza este archivo con el descargado"
+  ]
+}

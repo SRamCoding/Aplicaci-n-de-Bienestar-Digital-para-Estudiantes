@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear cuenta"
+            android:textSize="22sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/gray_900"
+            android:layout_marginTop="16dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Únete a miles de estudiantes"
+            android:textSize="13sp"
+            android:textColor="@color/gray_400"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Nombre -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Nombre completo" android:textSize="12sp" android:textColor="@color/gray_600" android:layout_marginBottom="4dp"/>
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_marginBottom="12dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etName"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Ana García Mendoza" android:inputType="textPersonName" android:textSize="14sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Universidad -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Universidad" android:textSize="12sp" android:textColor="@color/gray_600" android:layout_marginBottom="4dp"/>
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_marginBottom="12dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etUniversity"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Universidad Nacional..." android:inputType="textCapWords" android:textSize="14sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Carrera -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Carrera" android:textSize="12sp" android:textColor="@color/gray_600" android:layout_marginBottom="4dp"/>
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_marginBottom="12dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etCareer"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Ingeniería, Medicina..." android:inputType="textCapWords" android:textSize="14sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Email -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Correo electrónico" android:textSize="12sp" android:textColor="@color/gray_600" android:layout_marginBottom="4dp"/>
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_marginBottom="12dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etEmail"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="tu@universidad.edu" android:inputType="textEmailAddress" android:textSize="14sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Contraseña -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Contraseña" android:textSize="12sp" android:textColor="@color/gray_600" android:layout_marginBottom="4dp"/>
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:passwordToggleEnabled="true" android:layout_marginBottom="12dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPassword"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Mín. 8 caracteres" android:inputType="textPassword" android:textSize="14sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Confirmar contraseña -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Confirmar contraseña" android:textSize="12sp" android:textColor="@color/gray_600" android:layout_marginBottom="4dp"/>
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:passwordToggleEnabled="true" android:layout_marginBottom="16dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etConfirmPassword"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Repite tu contraseña" android:inputType="textPassword" android:textSize="14sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Términos -->
+        <CheckBox android:id="@+id/cbTerms"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Acepto los términos de uso y la política de privacidad"
+            android:textSize="12sp" android:textColor="@color/gray_600"
+            android:layout_marginBottom="16dp"
+            android:buttonTint="@color/teal_600"/>
+
+        <ProgressBar android:id="@+id/progressBar"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:visibility="gone" android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/btn_register"
+            style="@style/Widget.Equilibrio.Button"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView android:id="@+id/tvGoLogin"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="¿Ya tienes cuenta? Inicia sesión"
+            android:textSize="13sp" android:textColor="@color/teal_600"
+            android:layout_gravity="center" android:clickable="true" android:focusable="true"
+            android:layout_marginBottom="24dp"/>
+
+    </LinearLayout>
+</ScrollView>

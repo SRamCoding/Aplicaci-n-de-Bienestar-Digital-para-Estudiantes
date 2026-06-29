@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Límites de uso" android:textSize="22sp" android:fontFamily="sans-serif-medium"
+            android:textColor="@color/gray_900"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Configura tu tiempo máximo diario" android:textSize="13sp"
+            android:textColor="@color/gray_400" android:layout_marginBottom="16dp"/>
+
+        <!-- Redes sociales -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="16dp" app:cardElevation="0dp"
+            app:strokeWidth="1dp" app:strokeColor="@color/gray_200" app:cardBackgroundColor="@color/white">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="14dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="REDES SOCIALES" android:textSize="11sp"
+                    android:fontFamily="sans-serif-medium" android:textColor="@color/gray_400"
+                    android:letterSpacing="0.08" android:layout_marginBottom="8dp"/>
+
+                <!-- Instagram -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="10dp">
+                    <TextView android:layout_width="36dp" android:layout_height="36dp"
+                        android:gravity="center" android:text="📸" android:textSize="18sp"
+                        android:background="@color/amber_50" android:layout_marginEnd="10dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Instagram" android:textSize="13sp" android:textColor="@color/gray_900"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Límite diario" android:textSize="11sp" android:textColor="@color/gray_400"/>
+                    </LinearLayout>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnInstagramMinus"
+                        android:layout_width="32dp" android:layout_height="32dp"
+                        android:text="−" android:textSize="16sp"
+                        style="@style/Widget.Equilibrio.Button.Outline"
+                        android:paddingHorizontal="0dp" android:paddingVertical="0dp"/>
+                    <TextView android:id="@+id/tvInstagramLimit"
+                        android:layout_width="52dp" android:layout_height="wrap_content"
+                        android:text="2h 0m" android:textSize="13sp" android:fontFamily="sans-serif-medium"
+                        android:textColor="@color/gray_900" android:gravity="center"/>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnInstagramPlus"
+                        android:layout_width="32dp" android:layout_height="32dp"
+                        android:text="+" android:textSize="16sp"
+                        style="@style/Widget.Equilibrio.Button.Outline"
+                        android:paddingHorizontal="0dp" android:paddingVertical="0dp"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                    android:background="@color/gray_200"/>
+
+                <!-- TikTok -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="10dp">
+                    <TextView android:layout_width="36dp" android:layout_height="36dp"
+                        android:gravity="center" android:text="🎵" android:textSize="18sp"
+                        android:background="@color/purple_50" android:layout_marginEnd="10dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="TikTok" android:textSize="13sp" android:textColor="@color/gray_900"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Límite diario" android:textSize="11sp" android:textColor="@color/gray_400"/>
+                    </LinearLayout>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnTiktokMinus"
+                        android:layout_width="32dp" android:layout_height="32dp" android:text="−"
+                        android:textSize="16sp" style="@style/Widget.Equilibrio.Button.Outline"
+                        android:paddingHorizontal="0dp" android:paddingVertical="0dp"/>
+                    <TextView android:id="@+id/tvTiktokLimit"
+                        android:layout_width="52dp" android:layout_height="wrap_content"
+                        android:text="1h 0m" android:textSize="13sp" android:fontFamily="sans-serif-medium"
+                        android:textColor="@color/gray_900" android:gravity="center"/>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnTiktokPlus"
+                        android:layout_width="32dp" android:layout_height="32dp" android:text="+"
+                        android:textSize="16sp" style="@style/Widget.Equilibrio.Button.Outline"
+                        android:paddingHorizontal="0dp" android:paddingVertical="0dp"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                    android:background="@color/gray_200"/>
+
+                <!-- Twitter -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="10dp">
+                    <TextView android:layout_width="36dp" android:layout_height="36dp"
+                        android:gravity="center" android:text="🐦" android:textSize="18sp"
+                        android:background="@color/blue_50" android:layout_marginEnd="10dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="X (Twitter)" android:textSize="13sp" android:textColor="@color/gray_900"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Límite diario" android:textSize="11sp" android:textColor="@color/gray_400"/>
+                    </LinearLayout>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnTwitterMinus"
+                        android:layout_width="32dp" android:layout_height="32dp" android:text="−"
+                        android:textSize="16sp" style="@style/Widget.Equilibrio.Button.Outline"
+                        android:paddingHorizontal="0dp" android:paddingVertical="0dp"/>
+                    <TextView android:id="@+id/tvTwitterLimit"
+                        android:layout_width="52dp" android:layout_height="wrap_content"
+                        android:text="45m" android:textSize="13sp" android:fontFamily="sans-serif-medium"
+                        android:textColor="@color/gray_900" android:gravity="center"/>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnTwitterPlus"
+                        android:layout_width="32dp" android:layout_height="32dp" android:text="+"
+                        android:textSize="16sp" style="@style/Widget.Equilibrio.Button.Outline"
+                        android:paddingHorizontal="0dp" android:paddingVertical="0dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Notificaciones y alertas -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="16dp" app:cardElevation="0dp"
+            app:strokeWidth="1dp" app:strokeColor="@color/gray_200" app:cardBackgroundColor="@color/white">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="14dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="NOTIFICACIONES Y ALERTAS" android:textSize="11sp"
+                    android:fontFamily="sans-serif-medium" android:textColor="@color/gray_400"
+                    android:letterSpacing="0.08" android:layout_marginBottom="8dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="10dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Alerta al 80% del límite"
+                            android:textSize="13sp" android:textColor="@color/gray_900"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Aviso antes de llegar al máximo"
+                            android:textSize="11sp" android:textColor="@color/gray_400"/>
+                    </LinearLayout>
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchAlert80"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:checked="true" android:thumbTint="@color/white"
+                        android:trackTint="@color/teal_600"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/gray_200"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="10dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Bloqueo automático"
+                            android:textSize="13sp" android:textColor="@color/gray_900"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Bloquear app al alcanzar el límite"
+                            android:textSize="11sp" android:textColor="@color/gray_400"/>
+                    </LinearLayout>
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchAutoBlock"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:checked="false"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/gray_200"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="10dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Modo estudio"
+                            android:textSize="13sp" android:textColor="@color/gray_900"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Bloquear todo durante horas de clase"
+                            android:textSize="11sp" android:textColor="@color/gray_400"/>
+                    </LinearLayout>
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchStudyMode"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:checked="true"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveLimits"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Guardar cambios"
+            style="@style/Widget.Equilibrio.Button"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

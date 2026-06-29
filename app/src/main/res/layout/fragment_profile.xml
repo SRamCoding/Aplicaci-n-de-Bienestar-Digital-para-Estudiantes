@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header con avatar -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:padding="16dp" android:background="@color/white">
+            <TextView android:id="@+id/tvAvatar"
+                android:layout_width="56dp" android:layout_height="56dp"
+                android:gravity="center" android:text="?"
+                android:textSize="20sp" android:fontFamily="sans-serif-medium"
+                android:textColor="@color/teal_800" android:background="@color/teal_50"
+                android:layout_marginEnd="14dp"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Cargando..." android:textSize="17sp"
+                    android:fontFamily="sans-serif-medium" android:textColor="@color/gray_900"/>
+                <TextView android:id="@+id/tvUserEmail"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textSize="12sp" android:textColor="@color/gray_400" android:layout_marginTop="2dp"/>
+                <TextView android:id="@+id/tvStreak"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textSize="12sp" android:textColor="@color/teal_600" android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <!-- Universidad -->
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="14dp" app:cardElevation="0dp"
+                app:strokeWidth="1dp" app:strokeColor="@color/gray_200" app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🎓" android:textSize="20sp" android:layout_marginEnd="12dp"/>
+                    <TextView android:id="@+id/tvUniversity"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:textSize="13sp" android:textColor="@color/gray_700"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Logros -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="LOGROS" android:textSize="11sp" android:fontFamily="sans-serif-medium"
+                android:textColor="@color/gray_400" android:letterSpacing="0.08"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="16dp">
+                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="12dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/teal_50">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🌿" android:textSize="24sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Equilibrado" android:textSize="11sp"
+                            android:fontFamily="sans-serif-medium" android:textColor="@color/teal_800"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="12dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/purple_50">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="📚" android:textSize="24sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Estudioso" android:textSize="11sp"
+                            android:fontFamily="sans-serif-medium" android:textColor="@color/purple_600"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="12dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/amber_50">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🔥" android:textSize="24sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="En racha" android:textSize="11sp"
+                            android:fontFamily="sans-serif-medium" android:textColor="@color/amber_700"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- Botón admin (solo visible para admins) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAdmin"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="🛡️  Panel de Administrador"
+                style="@style/Widget.Equilibrio.Button.Outline"
+                android:visibility="gone"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Cerrar sesión -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Cerrar sesión"
+                style="@style/Widget.Equilibrio.Button.Outline"
+                android:textColor="@color/red_400"
+                app:strokeColor="@color/red_400"
+                android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

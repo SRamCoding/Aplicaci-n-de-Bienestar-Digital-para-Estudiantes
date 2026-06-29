@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Equilibrio</string>
+    <string name="login_title">Bienvenido</string>
+    <string name="register_title">Crear cuenta</string>
+    <string name="hint_email">Correo electrónico</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="hint_name">Nombre completo</string>
+    <string name="hint_university">Universidad</string>
+    <string name="hint_career">Carrera</string>
+    <string name="btn_login">Iniciar sesión</string>
+    <string name="btn_register">Crear mi cuenta</string>
+    <string name="btn_go_register">¿No tienes cuenta? Regístrate</string>
+    <string name="btn_go_login">¿Ya tienes cuenta? Inicia sesión</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="terms_label">Acepto los términos de uso y la política de privacidad</string>
+    <string name="notification_channel_id">equilibrio_alerts</string>
+    <string name="notification_channel_name">Alertas de uso</string>
+    <string name="save_changes">Guardar cambios</string>
+    <string name="logout">Cerrar sesión</string>
+</resources>

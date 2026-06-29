@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@android:drawable/ic_menu_today"
+        android:title="Inicio"/>
+    <item
+        android:id="@+id/statsFragment"
+        android:icon="@android:drawable/ic_menu_recent_history"
+        android:title="Stats"/>
+    <item
+        android:id="@+id/limitsFragment"
+        android:icon="@android:drawable/ic_lock_idle_alarm"
+        android:title="Límites"/>
+    <item
+        android:id="@+id/wellnessFragment"
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="Bienestar"/>
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="Perfil"/>
+</menu>

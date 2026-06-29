@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    android:gravity="center">
+
+    <TextView android:id="@+id/btnBack"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="← Bienestar" android:textSize="13sp" android:textColor="@color/teal_600"
+        android:layout_gravity="start" android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp" android:layout_marginBottom="24dp"
+        android:clickable="true" android:focusable="true"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Respiración 4-7-8" android:textSize="20sp"
+        android:fontFamily="sans-serif-medium" android:textColor="@color/gray_900"
+        android:gravity="center"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Inhala 4s · Sostén 7s · Exhala 8s"
+        android:textSize="13sp" android:textColor="@color/gray_400"
+        android:layout_marginTop="4dp" android:layout_marginBottom="40dp" android:gravity="center"/>
+
+    <!-- Círculo animado -->
+    <FrameLayout android:layout_width="180dp" android:layout_height="180dp"
+        android:layout_gravity="center_horizontal" android:layout_marginBottom="32dp">
+        <View android:id="@+id/circleBreath"
+            android:layout_width="180dp" android:layout_height="180dp"
+            android:background="@drawable/bg_circle_breathing"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical" android:gravity="center">
+            <TextView android:id="@+id/tvBreathLabel"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Listo" android:textSize="16sp"
+                android:fontFamily="sans-serif-medium" android:textColor="@color/teal_800"/>
+            <TextView android:id="@+id/tvBreathCount"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="4" android:textSize="40sp"
+                android:fontFamily="sans-serif-medium" android:textColor="@color/teal_600"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="segundos" android:textSize="12sp" android:textColor="@color/teal_400"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView android:id="@+id/tvCycle"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Ciclo 1 de 4" android:textSize="14sp"
+        android:textColor="@color/gray_400" android:layout_marginBottom="32dp" android:gravity="center"/>
+
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnBreath"
+        android:layout_width="200dp" android:layout_height="wrap_content"
+        android:text="Comenzar" style="@style/Widget.Equilibrio.Button"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

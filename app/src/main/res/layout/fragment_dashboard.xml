@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:id="@+id/tvGreeting"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Hola, Estudiante 👋"
+                    android:textSize="20sp" android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/gray_900"/>
+                <TextView android:id="@+id/tvDate"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textSize="12sp" android:textColor="@color/gray_400"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/ivNotification"
+                android:layout_width="28dp" android:layout_height="28dp"
+                android:src="@android:drawable/ic_menu_info_details"
+                android:clickable="true" android:focusable="true"/>
+        </LinearLayout>
+
+        <!-- Alert banner -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardAlert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/amber_50">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:padding="12dp" android:background="@color/amber_50">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="⚠️" android:textSize="16sp" android:layout_marginEnd="8dp"/>
+                <TextView android:id="@+id/tvAlert"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:textSize="12sp" android:textColor="@color/amber_900"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Métricas -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:padding="16dp" android:paddingTop="0dp">
+            <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginEnd="6dp"
+                app:cardCornerRadius="14dp" app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/white" app:strokeWidth="1dp" app:strokeColor="@color/gray_200">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center" android:padding="14dp">
+                    <TextView android:id="@+id/tvTotalUsage"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="--h --m" android:textSize="22sp" android:fontFamily="sans-serif-medium"
+                        android:textColor="@color/gray_900"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Uso total hoy" android:textSize="11sp" android:textColor="@color/gray_400"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginStart="6dp"
+                app:cardCornerRadius="14dp" app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/white" app:strokeWidth="1dp" app:strokeColor="@color/gray_200">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center" android:padding="14dp">
+                    <TextView android:id="@+id/tvGoalPct"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="--%"  android:textSize="22sp" android:fontFamily="sans-serif-medium"
+                        android:textColor="@color/teal_600"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Meta cumplida" android:textSize="11sp" android:textColor="@color/gray_400"/>
+                    <ProgressBar android:id="@+id/progressGoal"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="match_parent" android:layout_height="4dp"
+                        android:layout_marginTop="6dp" android:max="100"
+                        android:progressTint="@color/teal_600"
+                        android:progressBackgroundTint="@color/gray_200"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Gráfico semanal -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp" android:layout_marginBottom="10dp"
+            app:cardCornerRadius="16dp" app:cardElevation="0dp"
+            app:strokeWidth="1dp" app:strokeColor="@color/gray_200" app:cardBackgroundColor="@color/white">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="14dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="USO SEMANAL" android:textSize="11sp"
+                    android:fontFamily="sans-serif-medium" android:textColor="@color/gray_400"
+                    android:letterSpacing="0.08" android:layout_marginBottom="10dp"/>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Top apps -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp" android:layout_marginBottom="10dp"
+            app:cardCornerRadius="16dp" app:cardElevation="0dp"
+            app:strokeWidth="1dp" app:strokeColor="@color/gray_200" app:cardBackgroundColor="@color/white">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="14dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="APPS MÁS USADAS HOY" android:textSize="11sp"
+                    android:fontFamily="sans-serif-medium" android:textColor="@color/gray_400"
+                    android:letterSpacing="0.08" android:layout_marginBottom="6dp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTopApps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tip diario -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp" android:layout_marginBottom="10dp"
+            app:cardCornerRadius="16dp" app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/teal_50">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:padding="14dp" android:gravity="top">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="💡" android:textSize="20sp" android:layout_marginEnd="10dp"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="CONSEJO DEL DÍA" android:textSize="11sp"
+                        android:fontFamily="sans-serif-medium" android:textColor="@color/teal_800"
+                        android:letterSpacing="0.06" android:layout_marginBottom="4dp"/>
+                    <TextView android:id="@+id/tvTip"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:textSize="13sp" android:textColor="@color/teal_900" android:lineSpacingMultiplier="1.4"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Metas de hoy -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp" android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp" app:cardElevation="0dp"
+            app:strokeWidth="1dp" app:strokeColor="@color/gray_200" app:cardBackgroundColor="@color/white">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="14dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="METAS DE HOY" android:textSize="11sp"
+                    android:fontFamily="sans-serif-medium" android:textColor="@color/gray_400"
+                    android:letterSpacing="0.08" android:layout_marginBottom="6dp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvGoals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
